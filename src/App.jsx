@@ -3,7 +3,7 @@
 // import Portfolio from "./Components/Portfolio/Portfolio"
 // import Services from "./Components/Services/Services"
 
-import { lazy } from "react"
+import { lazy, Suspense } from "react"
 import LazyLoad from "react-lazyload";
 
 const Hero = lazy(() => import("./Components/Hero/Hero"));
