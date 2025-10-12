@@ -19,17 +19,17 @@ const items = [
     },
     {
         id: 3,
+        img: "/mern_notes.png",
+        title: "Notes App [Built using MERN Stack]",
+        desc: "A full-featured note-taking application built with the MERN stack.",
+        link: "https://frontendd-notes.onrender.com/",
+    },
+    {
+        id: 4,
         img: "/commerce.png",
         title: "DCKAP Commerce [Built using MERN Stack on BigCommerce]",
         desc: "B2B eCommerce platform built on Magento for a US-based client.",
         link: "https://www.dckap.com/commerce/",
-    },
-    {
-        id: 4,
-        img: "/nova.png",
-        title: "Novo Shoes [Built on Magento 2.x]",
-        desc: "Magento 2.x eCommerce website for an Australian footwear brand.",
-        link: "https://www.novoshoes.com.au/",
     },
     {
         id: 5,
