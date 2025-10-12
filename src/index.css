@@ -63,3 +63,10 @@ html {
     max-width: 1536px;
   }
 }
+
+/* Hide portfolio section on mobile */
+@media (max-width: 768px) {
+  .portfolio {
+    display: none;
+  }
+}
