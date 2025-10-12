@@ -153,9 +153,10 @@ const Hero = () => {
                     initial="initial"
                     animate="animate"
                     className="follow">
+
                     <motion.a
                         variants={followVariants}
-                        href="/"><img src="/download.png" alt="Resume" /></motion.a>
+                        href="/resume.pdf" download><img src="/download.png" alt="Resume" /></motion.a>
                     <motion.div
                         variants={followVariants}
                         className="followTextContainer">

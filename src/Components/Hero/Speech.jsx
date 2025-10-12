@@ -19,11 +19,10 @@ const Speech = () => {
                     wrapper="span"
                     speed={40}
                     deletionSpeed={60}
-                    //omitDeletionAnimation
                     repeat={Infinity}
                 />
             </div>
-            <img src="/man.png" alt="" />
+            {/* <img src="/man.png" alt="" /> */}
         </motion.div>
     )
 }
