@@ -1,103 +1,64 @@
-import { useRef, useState } from "react"
-import ComputerModelContainer from "./computer/ComputerModelContainer"
-import { ConsoleModel } from "./console/ConsoleModel"
-import ConsoleModelContainer from "./console/ConsoleModelContainer"
-import Counter from "./counter/Counter"
-import MugModelContainer from "./mug/MugModelContainer"
-import "./Services.css"
-import { motion, useInView } from "motion/react"
-
-const textVariants = {
-    initial: {
-        x: -100,
-        y: -100,
-        opacity: 0,
-    },
-    animate: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 1
-        }
-    }
-}
-
-const listVariants = {
-    initial: {
-        x: -100,
-        opacity: 0,
-    },
-    animate: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 1,
-            staggerChildren: 0.5
-        }
-    }
-}
+import { useState } from "react";
+import ComputerModelContainer from "./computer/ComputerModelContainer";
+import ConsoleModelContainer from "./console/ConsoleModelContainer";
+import Counter from "./counter/Counter";
+import MugModelContainer from "./mug/MugModelContainer";
+import "./Services.css";
 
 const services = [
     {
         id: 1,
         img: "/service1.png",
         title: "Full Stack Development",
-        subTitle: "MERN | PHP | Digital Marketing"
+        subTitle: "MERN | PHP | Digital Marketing",
     },
     {
         id: 2,
         img: "/service2.png",
         title: "UI/UX Implementation",
-        subTitle: "Responsive, mobile-first designs"
+        subTitle: "Responsive, mobile-first designs",
     },
     {
         id: 3,
         img: "/service3.png",
         title: "Client Collaboration",
-        subTitle: "Global brands (AU, NZ, UAE, UK)"
+        subTitle: "Global brands (AU, NZ, UAE, UK)",
     },
-]
+];
+
 const Services = () => {
-    const [currentServiceId, setCurrentServiceId] = useState(1)
-    const ref = useRef()
-    const isInView = useInView(ref, { margin: "-200px" })
+    const [currentServiceId, setCurrentServiceId] = useState(1);
+
     return (
-        <div className="services" ref={ref}>
+        <div className="services">
             <div className="sSection left">
-                <motion.h1
-                    variants={textVariants}
-                    intial="initial"
-                    animate={isInView ? "animate" : "initial"}
-                    className="sTitle">How do I help?
-                </motion.h1>
-                <motion.div
-                    variants={listVariants}
-                    animate={isInView ? "animate" : "initial"}
-                    className="serviceList">
+                <h1 className="sTitle">How do I help?</h1>
+
+                <div className="serviceList">
                     {services.map((service) => (
-                        <motion.div
-                            variants={listVariants}
-                            className="service"
+                        <div
+                            className={`service ${currentServiceId === service.id ? "active" : ""
+                                }`}
                             key={service.id}
                             onClick={() => setCurrentServiceId(service.id)}
                         >
                             <div className="serviceIcon">
-                                <img src={service.img} alt="" />
+                                <img src={service.img} alt={service.title} />
                             </div>
                             <div className="serviceInfo">
                                 <h2>{service.title}</h2>
                                 <h3>{service.subTitle}</h3>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
+
                 <div className="counterList">
                     <Counter from={0} to={5} text="Enterprise Clients" />
                     <Counter from={0} to={3} text="Years of Work Experience" />
                 </div>
             </div>
+
             <div className="sSection right">
                 {currentServiceId === 1 ? (
                     <ComputerModelContainer />
@@ -108,7 +69,7 @@ const Services = () => {
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Services
+export default Services;
