@@ -2,6 +2,8 @@
     height: 100%;
     display: flex;
     gap: 100px;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 .cSection {
@@ -11,6 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
 }
 
 .cSection:last-child {
@@ -18,16 +22,20 @@
     margin: 50px 0px;
     padding: 50px;
     border-radius: 50% 0px;
+    box-sizing: border-box;
 }
 
 form {
     width: 80%;
+    max-width: 100%;
+    /* Prevent form from overflowing */
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: rgba(2, 2, 45, 0.066);
     padding: 50px;
     border-radius: 50px;
+    box-sizing: border-box;
 }
 
 input,
@@ -35,6 +43,9 @@ textarea {
     padding: 12px;
     border: none;
     border-radius: 5px;
+    width: 100%;
+    /* Make inputs fill container */
+    box-sizing: border-box;
 }
 
 .formItem {
@@ -57,8 +68,9 @@ label {
 }
 
 @media (max-width: 1280px) {
-    .form {
+    form {
         width: 100%;
+        padding: 40px;
     }
 }
 
@@ -66,52 +78,94 @@ label {
     .contact {
         gap: 30px;
     }
-}
 
-@media (max-width: 1280px) {
-    .form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .contact {
-        gap: 30px;
+    form {
+        padding: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .contact {
         flex-direction: column;
+        gap: 0;
+        /* Remove gap to prevent overflow */
+        padding: 0;
+        /* Remove any container padding */
     }
 
     .cSection {
         width: 100%;
+        padding: 20px 16px;
+        /* Reduce side padding */
     }
 
     .cSection:first-child {
-        height: 70%;
+        height: auto;
+        /* Let content determine height */
+        min-height: 70vh;
     }
 
     .cSection:last-child {
-        height: 30%;
+        height: auto;
+        min-height: 30vh;
+        margin: 20px 0;
+        /* Reduce margin */
+        padding: 30px 16px;
+        /* Reduce padding */
+        border-radius: 30px 0px;
+        /* Smaller border radius */
+    }
+
+    form {
+        width: 100%;
+        padding: 30px 20px;
+        /* Reduce padding on mobile */
+        border-radius: 30px;
+        /* Smaller border radius */
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        font-size: 16px;
+        /* Prevent iOS zoom on focus */
+    }
+
+    .formButton {
+        padding: 16px;
     }
 }
 
-@media (max-width: 768px) {
+/* Extra small devices (iPhone SE, etc.) */
+@media (max-width: 430px) {
     .contact {
-        flex-direction: column;
+        overflow-x: hidden;
     }
 
     .cSection {
-        width: 100%;
-    }
-
-    .cSection:first-child {
-        height: 70%;
+        padding: 20px 12px;
+        /* Even less padding */
     }
 
     .cSection:last-child {
-        height: 30%;
+        margin: 15px 0;
+        padding: 20px 12px;
+        border-radius: 20px 0px;
+    }
+
+    form {
+        padding: 20px 16px;
+        border-radius: 20px;
+        gap: 16px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+    }
+
+    .formButton {
+        padding: 14px;
+        font-size: 14px;
     }
 }

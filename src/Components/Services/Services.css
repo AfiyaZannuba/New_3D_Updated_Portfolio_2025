@@ -1,3 +1,7 @@
+/* ============================================
+   UPDATED Services.css with Mobile Fixes
+   ============================================ */
+
 .services {
     height: 100%;
     overflow: hidden;
@@ -40,6 +44,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
 }
 
 .serviceIcon img {
@@ -47,8 +53,8 @@
     height: 24px;
 }
 
-.serviceIcon h2 {
-    font-size: 18;
+.serviceInfo h2 {
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 8px;
 }
@@ -126,13 +132,114 @@
     .services {
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        /* Stack sections vertically */
+        padding: 40px 20px;
+        /* Add padding for mobile */
+        height: auto;
+        /* Allow natural height */
+        min-height: 100vh;
+        /* Ensure full viewport coverage */
     }
 
     .sSection {
         width: 100%;
+        padding: 0;
+        /* Remove extra padding */
+    }
+
+    .sSection.left {
+        align-items: center;
+        /* Center content on mobile */
     }
 
     .sSection.right {
         display: none;
+    }
+
+    .sTitle {
+        font-size: 36px;
+        /* Smaller title for iPhone 13 */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .serviceList {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .service {
+        width: 100%;
+        padding: 20px;
+        /* Slightly less padding on mobile */
+        box-sizing: border-box;
+    }
+
+    .serviceInfo h2 {
+        font-size: 16px;
+        /* Adjust for mobile readability */
+    }
+
+    .serviceInfo h3 {
+        font-size: 12px;
+    }
+
+    .counterList {
+        width: 100%;
+        flex-direction: column;
+        /* Stack counters vertically */
+        gap: 20px;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .counter {
+        text-align: center;
+        width: 100%;
+    }
+
+    .counter h1 {
+        font-size: 40px;
+        /* Slightly smaller on mobile */
+    }
+
+    .counter p {
+        font-size: 14px;
+    }
+}
+
+/* Specific fix for iPhone 13 and similar (390px) */
+@media (max-width: 430px) {
+    .services {
+        padding: 30px 16px;
+    }
+
+    .sTitle {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .service {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .serviceIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .serviceIcon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .serviceInfo h2 {
+        font-size: 15px;
+    }
+
+    .serviceInfo h3 {
+        font-size: 11px;
     }
 }
