@@ -2,8 +2,6 @@
     height: 100%;
     display: flex;
     gap: 100px;
-    overflow-x: hidden;
-    /* Prevent horizontal scroll */
 }
 
 .cSection {
@@ -14,7 +12,6 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    /* Include padding in width calculation */
 }
 
 .cSection:last-child {
@@ -28,7 +25,6 @@
 form {
     width: 80%;
     max-width: 100%;
-    /* Prevent form from overflowing */
     display: flex;
     flex-direction: column;
     gap: 20px;
