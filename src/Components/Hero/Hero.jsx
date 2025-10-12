@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { animate } from "motion"
 import "./Hero.css"
 import Speech from "./Speech"
@@ -158,12 +159,47 @@ const Hero = () => {
                     <motion.div
                         variants={followVariants}
                         className="followTextContainer">
-                        <div className="followText">Download Resume</div>
+                        <div className="followText">Resume</div>
                     </motion.div>
                 </motion.div>
 
                 {/* Bubble */}
                 <Speech />
+
+                {/* View Projects Button */}
+                <motion.div
+                    style={{ marginRight: "10px" }}
+                    initial={{ y: -100, opacity: 0, scale: 0.8 }}
+                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        type: "spring",
+                        stiffness: 200
+                    }}
+                    whileHover={{
+                        scale: 1.03,
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <Link to="/projects" className="viewProjectsBtn">
+                        <motion.span
+                            animate={{ rotate: [0, 5, -5, 0] }}
+                            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                            className="projectsIcon"
+                        >
+                            🚀
+                        </motion.span>
+                        View My Projects
+                        <motion.span
+                            className="projectsArrow"
+                            animate={{ x: [0, 5, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                        >
+                            →
+                        </motion.span>
+                    </Link>
+                </motion.div>
 
                 {/* Certificate */}
                 <motion.div
