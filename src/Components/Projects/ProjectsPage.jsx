@@ -75,14 +75,7 @@ const items = [
     },
     {
         id: 11,
-        img: "/notes_mern_image.png",
-        title: "MERN Stack Note Taking App",
-        desc: "A full-featured note-taking application built with the MERN stack.",
-        link: "https://frontendd-notes.onrender.com/",
-    },
-    {
-        id: 12,
-        img: "/placeholder_image.png",
+        img: "/vibecoding_mern.png",
         title: "Job Tracker App [Built using MERN Stack]",
         desc: "A mern stack job tracking application vibecoded in less than 30 minutes.",
         link: "https://jobtracker-mern-app.onrender.com/",
