@@ -75,7 +75,7 @@ const items = [
     },
     {
         id: 11,
-        img: "/vibecoding_mern.png",
+        img: "/vibecoding-mern.png",
         title: "Job Tracker App [Built using MERN Stack]",
         desc: "A mern stack job tracking application vibecoded in less than 30 minutes.",
         link: "https://jobtracker-mern-app.onrender.com/",
