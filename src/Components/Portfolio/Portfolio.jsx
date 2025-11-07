@@ -5,38 +5,17 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 const items = [
     {
         id: 1,
-        img: "/azha.png",
-        title: "Azha Perfumes UAE",
-        desc: "Shopify E-commerce website for a UAE-based perfume brand.",
-        link: "https://uae.azhaperfumes.com/",
-    },
-    {
-        id: 2,
-        img: "/noya.png",
-        title: "House of Noya [Built on Shopify]",
-        desc: "A perfume eCommerce website for a UAE-based luxury fragrance brand.",
-        link: "https://www.houseofnoya.com/",
-    },
-    {
-        id: 3,
         img: "/mern_notes.png",
         title: "Notes App [Built using MERN Stack]",
         desc: "A full-featured note-taking application built with the MERN stack.",
         link: "https://frontendd-notes.onrender.com/",
     },
     {
-        id: 4,
+        id: 2,
         img: "/commerce.png",
         title: "DCKAP Commerce [Built using MERN Stack on BigCommerce]",
         desc: "B2B eCommerce platform built on Magento for a US-based client.",
         link: "https://www.dckap.com/commerce/",
-    },
-    {
-        id: 5,
-        img: "/shoeconnection.png",
-        title: "Shoe Connection [Built on Magento 2.x]",
-        desc: "Magento 2.x eCommerce website for an Australian footwear brand.",
-        link: "https://www.shoeconnection.com.au/",
     },
 ];
 
