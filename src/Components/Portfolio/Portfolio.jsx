@@ -10,13 +10,13 @@ const items = [
         desc: "A full-featured note-taking application built with the MERN stack.",
         link: "https://frontendd-notes.onrender.com/",
     },
-    {
-        id: 2,
-        img: "/commerce.png",
-        title: "DCKAP Commerce [Built using MERN Stack on BigCommerce]",
-        desc: "B2B eCommerce platform built on Magento for a US-based client.",
-        link: "https://www.dckap.com/commerce/",
-    },
+    // {
+    //     id: 2,
+    //     img: "/commerce.png",
+    //     title: "DCKAP Commerce [Built using MERN Stack on BigCommerce]",
+    //     desc: "B2B eCommerce platform built on Magento for a US-based client.",
+    //     link: "https://www.dckap.com/commerce/",
+    // },
 ];
 
 const imgVariants = {
